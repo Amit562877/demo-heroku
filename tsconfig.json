@@ -1,26 +1,31 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "amd",
     "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es5",
+    "paths": {
+      "exceljs": [
+        "node_modules/exceljs/dist/exceljs.min"
+      ]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": [
+      "node"
+    ],
     "lib": [
-      "es2018",
+      "es2017",
       "dom"
     ]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
   }
 }
